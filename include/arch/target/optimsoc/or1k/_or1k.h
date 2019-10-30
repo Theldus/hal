@@ -25,8 +25,8 @@
 #ifndef _TARGET_OPTIMSOC_OR1K_H_
 #define _TARGET_OPTIMSOC_OR1K_H_
 
-	#undef  __NEED_PROCESSOR_OPTIMSOC
-	#define __NEED_PROCESSOR_OPTIMSOC
+	#undef  __NEED_PROCESSOR_OR1K_OPTIMSOC
+	#define __NEED_PROCESSOR_OR1K_OPTIMSOC
 	#include <arch/processor/optimsoc.h>
 
 #endif /* _TARGET_OPTIMSOC_OR1K_H_ */
