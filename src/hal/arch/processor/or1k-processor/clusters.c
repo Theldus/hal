@@ -22,44 +22,48 @@
  * SOFTWARE.
  */
 
-#ifndef PROCESSOR_OR1K_QEMU_H_
-#define PROCESSOR_OR1K_QEMU_H_
+/* Must come fist. */
+#define __NEED_HAL_PROCESSOR
 
-	#ifndef __NEED_PROCESSOR_OR1K_QEMU
-		#error "bad processor configuration?"
-	#endif
-
-	/* Processor Interface Implementation */
-	#include <arch/processor/or1k-qemu/_or1k-qemu.h>
-
-/**
- * @addtogroup processor-or1k-qemu OpenRISC QEMU
- * @ingroup processors
- *
- * @brief OpenRISC QEMU Processor
- */
-/**@*/
-
-	#include <arch/processor/or1k-qemu/clusters.h>
-	#include <arch/processor/or1k-qemu/noc.h>
-
-/**@}*/
+#include <nanvix/hal/processor.h>
+#include <nanvix/const.h>
 
 /*============================================================================*
- * Provided Interface                                                         *
+ * or1k_cluster_get_num()                                                     *
  *============================================================================*/
+
 /**
- * @cond or1kqemu
+ * @todo TODO: Provide a detailed description for this function.
  */
+PUBLIC int or1k_cluster_get_num(void)
+{
+	return (0);
+}
 
-	/**
-	 * @name Provided Features
-	 */
-	/**@{*/
-	#define PROCESSOR_IS_MULTICLUSTER 0 /**< Multicluster feature */
-	#define PROCESSOR_HAS_NOC         0 /**< NoC feature          */
-	/**@}*/
+/*============================================================================*
+ * or1k_processor_cluster_is_compute()                                        *
+ *============================================================================*/
 
-/**@endcond*/
+/**
+ * @todo TODO: Provide a detailed description for this function.
+ */
+PUBLIC int or1k_cluster_is_compute(int clusternum)
+{
+	UNUSED(clusternum);
 
-#endif /* PROCESSOR_OR1K_QEMU_H_ */
+	return (0);
+}
+
+/*============================================================================*
+ * or1k_processor_cluster_is_io()                                             *
+ *============================================================================*/
+
+/**
+ * @todo TODO: Provide a detailed description for this function.
+ */
+PUBLIC int or1k_cluster_is_io(int clusternum)
+{
+	UNUSED(clusternum);
+
+	return (1);
+}
